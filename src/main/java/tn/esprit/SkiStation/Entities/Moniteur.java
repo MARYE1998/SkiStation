@@ -4,6 +4,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Set;
 
@@ -20,8 +21,8 @@ public class Moniteur implements Serializable {
     Long numMonitor;
     String nomM;
     String prenomM;
-    @Temporal(TemporalType.DATE)
-    Date dateRecru ;
+
+    LocalDate dateRecru ;
 
     @OneToMany
     Set<Cours> cours;

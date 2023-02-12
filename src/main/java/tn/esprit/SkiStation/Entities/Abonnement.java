@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -17,13 +18,12 @@ public class Abonnement implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long numAbon;
-    @Temporal(TemporalType.DATE)
-    Date dateDebut;
-    @Temporal(TemporalType.DATE)
-    Date dateFin;
-    Float prixAbon;
-    @Enumerated(EnumType.STRING)
-    TypeAbonnement typeAbonnement;
+
+     LocalDate dateDebut;
+     LocalDate dateFin;
+     Float prixAbon;
+     @Enumerated(EnumType.STRING)
+     TypeAbonnement typeAbonnement;
 
 
 
